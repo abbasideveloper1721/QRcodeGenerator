@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> QRcode Generator</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" > <!-- Link to external CSS -->
+</head>
+<body>
+    <div id="Main_Div">
+    <form action = "/send" method="post">
+        {% csrf_token %}
+    <h1 id = "h1">Enter some data  <input type="text" name="data" id="Entry"></h1>
+    <input type= "submit" value ="Generate QR code" id="btn">
+    </form>
+    </div>
+    <div  id= "ans_div">
+        <h1 id= "ans_had">Your Qr Code is: </h1>
+    </div>
+    <div id= "QR">
+        {% if data %}
+        <img src="{% static 'image/test.png' %}" alt="No image">
+        {% else %}
+        <h1>please enter useful data into data feild to generate QR code majid</h1>
+        {% endif %}
+
+</body>
+</html>

@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-v+#w-ib!0a67v=bj0+1-#2b1yu_@)ng1f#mnvv5+q)$8-t$=y#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['qrcodegenerator-tq3o.onrender.com']
 
 
 # Application definition
